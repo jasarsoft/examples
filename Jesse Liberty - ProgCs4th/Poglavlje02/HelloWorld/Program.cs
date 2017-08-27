@@ -1,10 +1,10 @@
-﻿class Program
+﻿using System;
+
+class Hello
 {
     static void Main()
     {
-        //korisiti objekt konzole sustava
-        /* koristi objekt konzole sustava
-         * kao sto je objasnjeno u tekstu*/
-        System.Console.WriteLine("Hello World");
+        //Console iz imenskoog prostora System
+        Console.WriteLine("Hello World");
     }
 }
