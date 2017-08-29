@@ -26,6 +26,24 @@ namespace InOutRef
             return Hour;
         }
 
+        public void SetTime(int hr, out int min, ref int sec)
+        {
+            //ako je prosljedjeno vrijeme vece od 30
+            //povecava minute i postavlja sekunde  na 0
+            //u suprotnom ne mjenja nista
+            if(sec >= 30)
+            {
+                Minute++;
+                Second = 0;
+            }
+
+            Hour = hr; //postavlja na proslijedjenu vrijednost
+
+            //proslijedjuje minute i sekunde natrag
+            min = Minute;
+            sec = Second;
+        }
+
         public void GetTime(ref int h, ref int m, ref int s)
         {
             h = Hour;
@@ -53,11 +71,16 @@ namespace InOutRef
             Time t = new Time(currentTime);
             t.DisplayCurrentTime();
 
-            int theHour = 0;
-            int theMinute = 0;
-            int theSecond = 0;
-            t.GetTime(ref theHour, ref theMinute, ref theSecond);
-            System.Console.WriteLine("Current time: {0}:{1}:{2}", theHour, theMinute, theSecond);
+            int theHour = 3;
+            int theMinute;
+            int theSecond = 20;
+
+            t.SetTime(theHour, out theMinute, ref theSecond);
+            System.Console.WriteLine("The minute is now: {0} and {1} seconds", theMinute, theSecond);
+
+            theSecond = 40;
+            t.SetTime(theHour, out theMinute, ref theSecond);
+            System.Console.WriteLine("the minute is now: " + "{0} and {1}", theMinute, theSecond);
         }
     }
 }
