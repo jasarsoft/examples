@@ -21,18 +21,6 @@ namespace OverloadConstructor
             System.Console.WriteLine("{0}/{1}/{2} {3}:{4}:{5}", Month, Date, Year, Hour, Minute, Second);
         }
 
-        public int GetHour()
-        {
-            return Hour;
-        }
-
-        public void GetTime(ref int h, ref int m, ref int s)
-        {
-            h = Hour;
-            m = Minute;
-            s = Second;
-        }
-
         //konstruktor
         public Time(System.DateTime dt)
         {
@@ -43,6 +31,16 @@ namespace OverloadConstructor
             Minute = dt.Minute;
             Second = dt.Second;
         }
+
+        public Time(int Year, int Month, int Date, int Hour, int Minute, int Second)
+        {
+            this.Year = Year;
+            this.Month = Month;
+            this.Date = Date;
+            this.Hour = Hour;
+            this.Minute = Minute;
+            this.Second = Second;
+        }
     }
 
     class Tester
@@ -50,14 +48,12 @@ namespace OverloadConstructor
         static void Main()
         {
             System.DateTime currentTime = System.DateTime.Now;
-            Time t = new Time(currentTime);
-            t.DisplayCurrentTime();
 
-            int theHour = 0;
-            int theMinute = 0;
-            int theSecond = 0;
-            t.GetTime(ref theHour, ref theMinute, ref theSecond);
-            System.Console.WriteLine("Current time: {0}:{1}:{2}", theHour, theMinute, theSecond);
+            Time t1 = new Time(currentTime);
+            t1.DisplayCurrentTime();
+
+            Time t2 = new Time(2005, 11, 18, 11, 03, 30);
+            t2.DisplayCurrentTime();
         }
     }
 }
