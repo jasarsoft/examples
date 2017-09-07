@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Primjer_01
+namespace UsingForEach
 {
     class Program
     {
@@ -21,14 +21,14 @@ namespace Primjer_01
                 empArray[i] = new Employee(i + 5);
             }
 
-            for(int i = 0; i < intArray.Length - 1; i++)
+            foreach(int i in intArray)
             {
-                Console.WriteLine(intArray[i].ToString());
+                Console.WriteLine(i.ToString());
             }
 
-            for(int i = 0; i < empArray.Length - 1; i++)
+            foreach(Employee e in empArray)
             {
-                Console.WriteLine(empArray[i].ToString());
+                Console.WriteLine(e.ToString());
             }
         }
     }
