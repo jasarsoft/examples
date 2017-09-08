@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer 11", "Primjer 11\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer 12", "Primjer 12\Primjer 12.csproj", "{238EA501-5F56-4BB1-92B0-DA6D80150453}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer 13", "Primjer 13\Primjer 13.csproj", "{E8AADC5D-B0C3-4C79-B599-A820788BEFA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{238EA501-5F56-4BB1-92B0-DA6D80150453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238EA501-5F56-4BB1-92B0-DA6D80150453}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238EA501-5F56-4BB1-92B0-DA6D80150453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8AADC5D-B0C3-4C79-B599-A820788BEFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8AADC5D-B0C3-4C79-B599-A820788BEFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8AADC5D-B0C3-4C79-B599-A820788BEFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8AADC5D-B0C3-4C79-B599-A820788BEFA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
