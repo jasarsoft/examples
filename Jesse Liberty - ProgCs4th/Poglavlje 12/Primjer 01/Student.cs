@@ -9,13 +9,15 @@ namespace Delegates
     {
         private string name;
 
+        public static readonly Pair<Student>.WhichIsFirst OrderStudents = new Pair<Student>.WhichIsFirst(Student.WhichStudentComesFirst);
+
         public Student(string name)
         {
             this.name = name;
         }
 
         //studenti se sortiraju abecedno
-        public Comparison WhichStudentComesFirst(Student s1, Student s2)
+        public static Comparison WhichStudentComesFirst(Student s1, Student s2)
         {
             return (String.Compare(s1.name, s2.name) < 0 ? Comparison.theFirstComesFirst : Comparison.theSecondComesFirst);
         }

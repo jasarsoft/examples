@@ -9,13 +9,15 @@ namespace Delegates
     {
         private int weight;
 
+        public static readonly Pair<Dog>.WhichIsFirst OrderDogs = new Pair<Dog>.WhichIsFirst(Dog.WhichDogComesFirst);
+
         public Dog(int weight)
         {
             this.weight = weight;
         }
 
         //psi se sortiraju po tezini
-        public  Comparison WhichDogComesFirst(Dog d1, Dog d2)
+        public static Comparison WhichDogComesFirst(Dog d1, Dog d2)
         {
             return d1.weight > d2.weight ? Comparison.theSecondComesFirst : Comparison.theFirstComesFirst;
         }

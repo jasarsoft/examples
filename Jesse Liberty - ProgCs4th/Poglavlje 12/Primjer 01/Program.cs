@@ -29,19 +29,19 @@ namespace Delegates
             Console.WriteLine();
 
             //instancira delegate
-            Pair<Student>.WhichIsFirst theStudentDelegate = new Pair<Student>.WhichIsFirst(jesse.WhichStudentComesFirst);
-            Pair<Dog>.WhichIsFirst theDogDelegate = new Pair<Dog>.WhichIsFirst(milo.WhichDogComesFirst);
+            //Pair<Student>.WhichIsFirst theStudentDelegate = new Pair<Student>.WhichIsFirst(jesse.WhichStudentComesFirst);
+            //Pair<Dog>.WhichIsFirst theDogDelegate = new Pair<Dog>.WhichIsFirst(milo.WhichDogComesFirst);
 
             //sortira pomocu delegata
-            studentPair.Sort(theStudentDelegate);
+            studentPair.Sort(Student.OrderStudents);
             Console.WriteLine("After Sort studentPair\t\t: {0}", studentPair.ToString());
-            studentPair.ReverseSort(theStudentDelegate);
+            studentPair.ReverseSort(Student.OrderStudents);
             Console.WriteLine("After ReverseSort studentPair\t: {0}", studentPair.ToString());
             Console.WriteLine();
 
-            dogPair.Sort(theDogDelegate);
+            dogPair.Sort(Dog.OrderDogs);
             Console.WriteLine("After Sort dogPair\t\t: {0}", dogPair.ToString());
-            dogPair.ReverseSort(theDogDelegate);
+            dogPair.ReverseSort(Dog.OrderDogs);
             Console.WriteLine("After ReverseSort\t\t: {0}", dogPair.ToString());
         }
     }
