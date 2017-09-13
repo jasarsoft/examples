@@ -28,9 +28,11 @@ namespace RethrowingExceptions
                 Exception inner = e.InnerException;
                 while(inner != null)
                 {
+                    
                     Console.WriteLine("{0}", inner.Message);
                     inner = inner.InnerException;
                 }
+                Console.WriteLine(e.ToString());
             }
         }
 
