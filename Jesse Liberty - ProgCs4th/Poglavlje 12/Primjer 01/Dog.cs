@@ -15,7 +15,7 @@ namespace Delegates
         }
 
         //psi se sortiraju po tezini
-        public static Comparison WhichDogComesFirst(Dog d1, Dog d2)
+        public  Comparison WhichDogComesFirst(Dog d1, Dog d2)
         {
             return d1.weight > d2.weight ? Comparison.theSecondComesFirst : Comparison.theFirstComesFirst;
         }

@@ -29,8 +29,8 @@ namespace Delegates
             Console.WriteLine();
 
             //instancira delegate
-            Pair<Student>.WhichIsFirst theStudentDelegate = new Pair<Student>.WhichIsFirst(Student.WhichStudentComesFirst);
-            Pair<Dog>.WhichIsFirst theDogDelegate = new Pair<Dog>.WhichIsFirst(Dog.WhichDogComesFirst);
+            Pair<Student>.WhichIsFirst theStudentDelegate = new Pair<Student>.WhichIsFirst(jesse.WhichStudentComesFirst);
+            Pair<Dog>.WhichIsFirst theDogDelegate = new Pair<Dog>.WhichIsFirst(milo.WhichDogComesFirst);
 
             //sortira pomocu delegata
             studentPair.Sort(theStudentDelegate);

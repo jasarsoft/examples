@@ -15,7 +15,7 @@ namespace Delegates
         }
 
         //studenti se sortiraju abecedno
-        public static Comparison WhichStudentComesFirst(Student s1, Student s2)
+        public Comparison WhichStudentComesFirst(Student s1, Student s2)
         {
             return (String.Compare(s1.name, s2.name) < 0 ? Comparison.theFirstComesFirst : Comparison.theSecondComesFirst);
         }
