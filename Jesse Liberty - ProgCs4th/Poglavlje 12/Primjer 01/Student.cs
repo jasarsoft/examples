@@ -9,11 +9,17 @@ namespace Delegates
     {
         private string name;
 
-        public static readonly Pair<Student>.WhichIsFirst OrderStudents = new Pair<Student>.WhichIsFirst(Student.WhichStudentComesFirst);
-
         public Student(string name)
         {
             this.name = name;
+        }
+
+        public static Pair<Student>.WhichIsFirst OrderStudents
+        {
+            get
+            {
+                return new Pair<Student>.WhichIsFirst(Student.WhichStudentComesFirst);
+            }
         }
 
         //studenti se sortiraju abecedno

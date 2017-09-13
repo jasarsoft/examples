@@ -9,11 +9,17 @@ namespace Delegates
     {
         private int weight;
 
-        public static readonly Pair<Dog>.WhichIsFirst OrderDogs = new Pair<Dog>.WhichIsFirst(Dog.WhichDogComesFirst);
-
         public Dog(int weight)
         {
             this.weight = weight;
+        }
+
+        public static Pair<Dog>.WhichIsFirst OrderDogs
+        {
+            get
+            {
+                return new Pair<Dog>.WhichIsFirst(Dog.WhichDogComesFirst);
+            }
         }
 
         //psi se sortiraju po tezini
