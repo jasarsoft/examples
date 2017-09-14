@@ -13,7 +13,8 @@ namespace EventKeyword
         //kad ima sat, pretplacuje se na dogadjaj SecondChangeHandler
         public void Subscribe(Clock theClock)
         {
-            theClock.OnSecondChange += new Clock.SecondChangeHandler(TimeHasChanged);
+            //theClock.OnSecondChange += new Clock.SecondChangeHandler(TimeHasChanged);
+            theClock.OnSecondChange += TimeHasChanged;
         }
 
         //metoda koja implementira delegiranu funkcionalnost

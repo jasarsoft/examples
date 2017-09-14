@@ -10,7 +10,8 @@ namespace EventKeyword
     {
         public void Subscribe(Clock theClock)
         {
-            theClock.OnSecondChange += new Clock.SecondChangeHandler(WriteLogEntry);
+            //theClock.OnSecondChange += new Clock.SecondChangeHandler(WriteLogEntry);
+            theClock.OnSecondChange += WriteLogEntry;
         }
 
         //ova bih metoda trebala zapisivati u datoteku
