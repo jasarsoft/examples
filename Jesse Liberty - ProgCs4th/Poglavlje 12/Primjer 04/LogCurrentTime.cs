@@ -11,7 +11,11 @@ namespace EventKeyword
         public void Subscribe(Clock theClock)
         {
             //theClock.OnSecondChange += new Clock.SecondChangeHandler(WriteLogEntry);
-            theClock.OnSecondChange += WriteLogEntry;
+            //theClock.OnSecondChange += WriteLogEntry;
+            theClock.OnSecondChange += delegate (object theClock1, TimeInfoEventArgs ti)
+            {
+                Console.WriteLine("Logging to file: {0}:{1}:{2}", ti.hour.ToString(), ti.minute.ToString(), ti.second.ToString());
+            };
         }
 
         //ova bih metoda trebala zapisivati u datoteku
