@@ -11,7 +11,11 @@ namespace InvokingDelegatedMethodsManually
         
         public void Subscribe(ClassWithDelegate theClassWithDelegate)
         {
-            theClassWithDelegate.theDelegate += new ClassWithDelegate.DelegateThatReturnsInt(DisplayCounter);
+            //theClassWithDelegate.theDelegate += new ClassWithDelegate.DelegateThatReturnsInt(DisplayCounter);
+            theClassWithDelegate.theDelegate += delegate ()
+            {
+                return ++myCount;
+            };
         }
 
         public int DisplayCounter()

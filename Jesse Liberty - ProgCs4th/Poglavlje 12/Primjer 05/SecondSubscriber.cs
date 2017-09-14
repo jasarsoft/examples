@@ -11,7 +11,11 @@ namespace InvokingDelegatedMethodsManually
 
         public void Subscribe(ClassWithDelegate theClassWithDelegate)
         {
-            theClassWithDelegate.theDelegate += new ClassWithDelegate.DelegateThatReturnsInt(Doubler);
+            //theClassWithDelegate.theDelegate += new ClassWithDelegate.DelegateThatReturnsInt(Doubler);
+            theClassWithDelegate.theDelegate += delegate ()
+            {
+                return myCounter += 2;
+            };
         }
 
         public int Doubler()
