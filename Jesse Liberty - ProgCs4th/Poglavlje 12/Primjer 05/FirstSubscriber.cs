@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace InvokingDelegatedMethodsManually
 {
@@ -14,6 +15,9 @@ namespace InvokingDelegatedMethodsManually
             //theClassWithDelegate.theDelegate += new ClassWithDelegate.DelegateThatReturnsInt(DisplayCounter);
             theClassWithDelegate.theDelegate += delegate ()
             {
+                Console.WriteLine("Busy in DisplayCounter...");
+                Thread.Sleep(4000);
+                Console.WriteLine("Done with work in DisplayCounter...");
                 return ++myCount;
             };
         }
