@@ -20,7 +20,8 @@ namespace WorkingWithADONET
             string connectionString = "server=localhost; Trusted_Connection=yes; database=Northwind";
 
             //uzima zapise iz tablica kupca
-            string commandString = "SELECT CompanyName, ContactName FROM Customers";
+            //string commandString = "SELECT CompanyName, ContactName FROM Customers";
+            string commandString = "SELECT CustomerID, CompanyName FROM Customers WHERE city='London'";
 
             //stvara naredbeni objekat za skup podataka i DataSet
             SqlDataAdapter dataAdapter = new SqlDataAdapter(commandString, connectionString);
@@ -36,7 +37,8 @@ namespace WorkingWithADONET
             //za svaki red u tablici prikazuje informacije
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                listBox1.Items.Add(dataRow["CompanyName"] + " (" + dataRow["ContactName"] + ")");
+                //listBox1.Items.Add(dataRow["CompanyName"] + " (" + dataRow["ContactName"] + ")");
+                listBox1.Items.Add(dataRow["CompanyName"]);
             }
         }
     }
