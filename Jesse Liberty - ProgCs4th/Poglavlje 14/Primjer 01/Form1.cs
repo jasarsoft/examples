@@ -38,7 +38,7 @@ namespace WorkingWithADONET
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 //listBox1.Items.Add(dataRow["CompanyName"] + " (" + dataRow["ContactName"] + ")");
-                listBox1.Items.Add(dataRow["CompanyName"]);
+                listBox1.Items.Add(dataRow["CustomerID"] + "\t" + dataRow["CompanyName"]);
             }
         }
     }
