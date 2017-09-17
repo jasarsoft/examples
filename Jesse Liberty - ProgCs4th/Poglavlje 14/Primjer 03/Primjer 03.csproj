@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomizedDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizedDataSet.Designer.cs">
+      <DependentUpon>CustomizedDataSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeclarativeDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
       <DependentUpon>ProgrammaticDataDisply.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomizedDataSet.resx">
+      <DependentUpon>CustomizedDataSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeclarativeDB.resx">
       <DependentUpon>DeclarativeDB.cs</DependentUpon>
     </EmbeddedResource>
