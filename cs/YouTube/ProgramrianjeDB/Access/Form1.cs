@@ -107,5 +107,13 @@ namespace Access
             Form2 f = new Form2();
             f.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            OleDbDataAdapter oda = new OleDbDataAdapter("SELECT * FROM InformacijeAutomobila WHERE Marka = '" + textBoxPretrazi.Text + "'", konekcija);
+            oda.Fill(dt);
+            Tabela.DataSource = dt; 
+        }
     }
 }
