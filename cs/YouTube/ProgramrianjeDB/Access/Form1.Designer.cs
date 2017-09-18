@@ -44,6 +44,7 @@
             this.MaxBrzina = new System.Windows.Forms.TextBox();
             this.Tezina = new System.Windows.Forms.TextBox();
             this.Tabela = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Tabela)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,11 +185,22 @@
             this.Tabela.Size = new System.Drawing.Size(700, 414);
             this.Tabela.TabIndex = 15;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 402);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "NEW";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 467);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Tabela);
             this.Controls.Add(this.Tezina);
             this.Controls.Add(this.MaxBrzina);
@@ -231,6 +243,7 @@
         private System.Windows.Forms.TextBox MaxBrzina;
         private System.Windows.Forms.TextBox Tezina;
         private System.Windows.Forms.DataGridView Tabela;
+        private System.Windows.Forms.Button button1;
     }
 }
 
