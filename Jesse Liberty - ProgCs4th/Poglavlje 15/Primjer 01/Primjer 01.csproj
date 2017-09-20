@@ -98,6 +98,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DisplayShippers.aspx" />
     <Content Include="HelloWeb1.aspx" />
     <Content Include="Language.aspx" />
     <Content Include="packages.config" />
@@ -118,6 +119,13 @@
     <Content Include="Pozdrav.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayShippers.aspx.cs">
+      <DependentUpon>DisplayShippers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayShippers.aspx.designer.cs">
+      <DependentUpon>DisplayShippers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HelloWeb1.aspx.cs">
       <DependentUpon>HelloWeb1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
