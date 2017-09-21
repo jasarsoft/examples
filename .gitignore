@@ -275,3 +275,5 @@ __pycache__/
 # tools/
 /Jesse Liberty - ProgCs4th/Poglavlje 04/Primjer 06
 python/Osnove programiranja Singidunum/
+*.dll
+*.netmodule
