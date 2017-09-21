@@ -1,6 +1,7 @@
 ﻿using System;
 
 
+
 namespace Primjer_02
 {
     class Program
