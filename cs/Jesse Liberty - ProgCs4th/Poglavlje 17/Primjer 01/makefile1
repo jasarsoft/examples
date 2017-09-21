@@ -1,0 +1,3 @@
+csc /t:module MyCalc.cs (output: calc.netmodule)
+csc /t:module Fraction.cs (output: fraction.netmodule)
+csc /addmodule:calc.netmodule /addmodule:fraction.netmodule /t:exe Program.cs (ouput: executable test.exe)
