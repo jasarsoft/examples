@@ -1,0 +1,6 @@
+csc /target:module /reference:System.dll Calc.cs
+csc /target:module /reference:System.dll Fraction.cs
+csc /target:library /reference:System.dll Fraction.cs
+csc /target:library /reference:System.dll Calc.cs
+csc /target:library /reference:Fraction.dll /reference:Calc.dll /out:MySharedLibrary.dll AssemblyInfo.cs
+csc /target:library /addmodule:Calc.netmodule /addmodule:Fraction.netmodule /out:MySharedLibrary.dll AssemblyInfo.cs

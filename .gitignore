@@ -277,3 +277,4 @@ __pycache__/
 python/Osnove programiranja Singidunum/
 *.dll
 *.netmodule
+*.snk
