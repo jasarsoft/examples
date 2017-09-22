@@ -15,8 +15,9 @@ namespace ReflectingOnMembersOfType
             Console.WriteLine("Single Type is {0}", theType);
 
             //uzima sve clanove
-            MemberInfo[] mbInfoArray = theType.GetMembers();
-            foreach(MemberInfo mbInfo in mbInfoArray)
+            //MemberInfo[] mbInfoArray = theType.GetMembers();
+            MemberInfo[] mbInfoArray = theType.GetMethods();
+            foreach (MemberInfo mbInfo in mbInfoArray)
             {
                 Console.WriteLine("{0} is a {1}", mbInfo, mbInfo.MemberType);
             }
