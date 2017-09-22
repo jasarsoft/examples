@@ -7,8 +7,8 @@ namespace Marshaling
 {
     //za rasporedjivanje po referenci smjestite u komentar atribut
     //a izdvojite iz koemntara osnvnu klasu
-    [Serializable]
-    public class Point //: MarshalByRefObject
+    //[Serializable]
+    public class Point : MarshalByRefObject
     {
         private int x;
         private int y;
