@@ -53,12 +53,13 @@ namespace UsingAMonitor
             {
                 //sihrnonizira ovaj dio koda
                 Monitor.Enter(this);
+                Console.WriteLine("Enter Decrementer");
 
                 //ako brojac jos nije 10
                 //tada oslobadja monitor za ostale dretve koje cekaju
-                if(counter < 10)
+                while(counter < 5)
                 {
-                    Console.WriteLine("[{0}] Decrementer. Counter: {1}. Wait", Thread.CurrentThread.Name, counter);
+                    Console.WriteLine("[{0}] Decrementer 1. Counter: {1}. Wait", Thread.CurrentThread.Name, counter);
                     Monitor.Wait(this);
                 }
 
@@ -68,12 +69,15 @@ namespace UsingAMonitor
                     temp--;
                     Thread.Sleep(1);
                     counter = temp;
-                    Console.WriteLine("[{0}] Decrementer. Counter: {1}", Thread.CurrentThread.Name, counter);
+                    Console.WriteLine("[{0}] Decrementer 2. Counter: {1}", Thread.CurrentThread.Name, counter);
                 }
             }
             finally
             {
+                //Monitor.Pulse(this);
+                Console.WriteLine("Exit Decrementer");
                 Monitor.Exit(this);
+                
             }
         }
 
@@ -81,14 +85,19 @@ namespace UsingAMonitor
         {
             try
             {
-                Monitor.Enter(this);
+                //Monitor.Enter(this);
                 while (counter < 10)
                 {
+                    Monitor.Enter(this);
+                    Console.WriteLine("Enter Incrementer");
                     long temp = counter;
                     temp++;
                     Thread.Sleep(1);
                     counter = temp;
-                    Console.WriteLine("[{0}] Increment. Counter: {1}", Thread.CurrentThread.Name, counter);
+                    Console.WriteLine("[{0}] Incrementer. Counter: {1}", Thread.CurrentThread.Name, counter);
+                    Monitor.Pulse(this);
+                    Console.WriteLine("Exit Incrementer");
+                    Monitor.Exit(this);
                 }
 
                 //za sada je dosta povecanja nek druga dretva preuzme monitor
@@ -96,8 +105,8 @@ namespace UsingAMonitor
             }
             finally
             {
-                Console.WriteLine("[{0}] Exiting...", Thread.CurrentThread.Name);
-                Monitor.Exit(this);
+                //Console.WriteLine("[{0}] Exiting...", Thread.CurrentThread.Name);
+                //Monitor.Exit(this);
             }
         }   
     }
