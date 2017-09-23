@@ -92,7 +92,7 @@ namespace UsingAMonitor
                 }
 
                 //za sada je dosta povecanja nek druga dretva preuzme monitor
-                Monitor.Pulse(this);
+                //Monitor.Pulse(this);
             }
             finally
             {
