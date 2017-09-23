@@ -14,7 +14,7 @@ namespace Primjer_05
         static void Main(string[] args)
         {
             HttpChannel chan = new HttpChannel();
-            ChannelServices.RegisterChannel(chan, true);
+            ChannelServices.RegisterChannel(chan, false);
 
             CalculatorServerNS.CalculatorServer calculator = new CalculatorServerNS.CalculatorServer();
             RemotingServices.Marshal(calculator, "theEndPoint");
