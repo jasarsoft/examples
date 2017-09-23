@@ -37,6 +37,7 @@ namespace Primjer_01
             for(int i = 0; i < 1000; i++)
             {
                 Console.WriteLine("Incrementer: {0}", i);
+                Thread.Sleep(1);
             }
         }
 
@@ -46,6 +47,7 @@ namespace Primjer_01
             for(int i = 1000; i >= 0; i--)
             {
                 Console.WriteLine("Decrementer: {0}", i);
+                Thread.Sleep(1);
             }
         }
     }
