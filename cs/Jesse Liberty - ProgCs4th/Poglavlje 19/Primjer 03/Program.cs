@@ -21,7 +21,8 @@ namespace CalculatorServerNS
 
             //registrira tip dobro poznatog objekta i govori posluzitelju
             //da poveze tip sa zavrsom tackom "theEndPoint"
-            RemotingConfiguration.RegisterWellKnownServiceType(calcType, "theEndPoint", WellKnownObjectMode.Singleton);
+            //RemotingConfiguration.RegisterWellKnownServiceType(calcType, "theEndPoint", WellKnownObjectMode.Singleton);
+            RemotingConfiguration.RegisterWellKnownServiceType(calcType, "theEndPoint", WellKnownObjectMode.SingleCall);
 
             Console.WriteLine("Press [ENTER] to exit...");
             Console.ReadKey();
