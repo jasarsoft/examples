@@ -44,6 +44,8 @@ namespace CalculatorClient
             {
                 Console.WriteLine("Exception caught: {0}", ex.Message);
             }
+            Console.WriteLine("Press [ENTER] to exit...");
+            Console.ReadKey();
         }
     }
 }
