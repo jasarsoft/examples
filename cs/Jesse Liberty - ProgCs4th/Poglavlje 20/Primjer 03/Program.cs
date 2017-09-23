@@ -47,13 +47,22 @@ namespace SharedResource
                     //int temp = counter;
                     //temp++; //povecanje
 
-                    int temp = Interlocked.Increment(ref counter);
+                    //int temp = Interlocked.Increment(ref counter);
+
+                    int temp;
+                    lock(this)
+                    {
+                        temp = counter;
+                        temp++;
+                        Thread.Sleep(1);
+                        counter = temp;
+                    }
 
                     //simulira obavljanje posla
-                    Thread.Sleep(0);
+                    //Thread.Sleep(0);
 
                     //pridruzuje povecanu vrijednost i prikazuje rezultat
-                    counter = temp;
+                    //counter = temp;
                     Console.WriteLine("{0} Incrementer: {1}", Thread.CurrentThread.Name, counter);
                 }
             }
