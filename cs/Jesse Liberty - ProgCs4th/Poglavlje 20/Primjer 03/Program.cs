@@ -44,11 +44,13 @@ namespace SharedResource
             {
                 while(counter < 1000)
                 {
-                    int temp = counter;
-                    temp++; //povecanje
+                    //int temp = counter;
+                    //temp++; //povecanje
+
+                    int temp = Interlocked.Increment(ref counter);
 
                     //simulira obavljanje posla
-                    Thread.Sleep(1);
+                    Thread.Sleep(0);
 
                     //pridruzuje povecanu vrijednost i prikazuje rezultat
                     counter = temp;
