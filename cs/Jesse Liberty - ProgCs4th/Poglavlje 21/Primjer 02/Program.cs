@@ -38,7 +38,7 @@ namespace ExploringFilesAndSubdirectories
 
             //stvar uvlake za mape
             for (int i = 0; i < indentLevel; i++)
-                Console.Write("    "); //dva razmaka po razini
+                Console.Write("  "); //dva razmaka po razini
 
             //ispisuje mapu i vrijeme kad joj je zadnji put pristupano
             Console.WriteLine("[{0}] {1} [{2}]", indentLevel, dir.Name, dir.LastAccessTime);
@@ -49,11 +49,20 @@ namespace ExploringFilesAndSubdirectories
             {
                 //jos jedna uvlaka kako bih datoteke bile ispod mapa
                 for (int i = 0; i < indentLevel + 1; i++)
-                    Console.Write("    "); //4 razmaka po razini
+                    Console.Write(" "); //2 razmaka po razini
 
                 Console.WriteLine("{0} [{1}] Size: {2} bytes", file.Name, file.LastWriteTime, file.Length);
                 fileCounter++;
             }
+
+            //uzima sve mape iz tekuce mape i rekurzivno poziva ovu metodu za svaku
+            DirectoryInfo[] directories = dir.GetDirectories();
+            foreach (DirectoryInfo newDir in  directories)
+            {
+                dirCounter++; //povecava brojac
+                ExploreDirectory(newDir);
+            }
+            indentLevel++;
         }
     }
 }
