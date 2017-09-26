@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Diagnostics;
 
 namespace Primjer_05
 {
@@ -9,15 +10,23 @@ namespace Primjer_05
 
         static void Main()
         {
+            Program p = new Program();
 
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            p.Run();
+
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds.ToString() + " ms");
         }
 
         //pokrece je sa imenom mape
         private void Run()
         {
             //stvara binarne tokove
-            Stream inputStream = File.OpenRead(@"input.txt");
-            Stream outputStream = File.OpenWrite(@"output.txt.bak");
+            Stream inputStream = File.OpenRead(@"D:\Games\Shollym Multi-Patch 2016\sound.pack");
+            Stream outputStream = File.OpenWrite(@"D:\Games\Shollym Multi-Patch 2016\sound.pack.bak");
 
             //dodaje tokove s medjuspremicima na pocetak binarnih tokova
             BufferedStream bufferedInput = new BufferedStream(inputStream);
