@@ -15,6 +15,12 @@ namespace Vjezba_02
             mojInteger = 17;
             mojString = "Moj cjeli broj \"mojInteger\" je: ";
             Console.WriteLine("{0} {1}.", mojString, mojInteger);
+
+            mojInteger = +mojInteger;
+            Console.WriteLine("mojInteger +: {0}", mojInteger);
+
+            mojInteger = -mojInteger;
+            Console.WriteLine("mojInteger -: {0}", mojInteger);
         }
     }
 }
