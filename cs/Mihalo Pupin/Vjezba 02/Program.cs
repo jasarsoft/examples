@@ -21,6 +21,10 @@ namespace Vjezba_02
 
             mojInteger = -mojInteger;
             Console.WriteLine("mojInteger -: {0}", mojInteger);
+
+            int var1, var2 = 5, var3 = 6;
+            var1 = var2++ * --var3;
+            Console.WriteLine(var1);
         }
     }
 }
