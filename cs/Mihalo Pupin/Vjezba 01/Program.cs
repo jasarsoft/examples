@@ -9,7 +9,9 @@ namespace Vjezba_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Pozdrav svijete iz C#!");
+            //Console.WriteLine("Pozdrav svijete iz C#!");
+            Console.Write("Zdravo svijete ");
+            Console.Write("na jezuku C#!\r\n");
         }
     }
 }
