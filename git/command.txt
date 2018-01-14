@@ -1,0 +1,4 @@
+#inicijalizacija git-a
+md git
+cd git
+git init
