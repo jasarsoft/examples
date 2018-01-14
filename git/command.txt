@@ -2,3 +2,7 @@
 md git
 cd git
 git init
+
+#glavne i javne postavke za commite
+git config --global user.name "Ana Anic"
+git config --global user.email "ana.anic@privatna.domena.com"
