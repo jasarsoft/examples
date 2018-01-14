@@ -28,3 +28,6 @@ git diff -U10
 
 #dodavanje u index/stage datoteke za commite
 git add uvod.tex
+
+#dodavanje u stage cijeli direktoriji
+git add naziv_direktorija/*
