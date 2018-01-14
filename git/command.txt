@@ -25,3 +25,6 @@ git diff
 
 #deset linija oko izmjenjenog dijela
 git diff -U10
+
+#dodavanje u index/stage datoteke za commite
+git add uvod.tex
