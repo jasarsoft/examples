@@ -11,3 +11,5 @@ git config --global user.email "ana.anic@privatna.domena.com"
 git config user.name "Ana Anic"
 git config user.name "ana.anic@privatna.domena.com"
 
+#postavke za boju naredbi
+git config --global color.ui auto
