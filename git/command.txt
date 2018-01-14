@@ -16,3 +16,6 @@ git config --global color.ui auto
 
 #program za koristenj konflikata
 git config --global merge.tool gvimdiff
+
+#provjera da li imamo nesto spremiti
+git status
