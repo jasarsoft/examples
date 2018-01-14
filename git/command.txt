@@ -37,3 +37,6 @@ git add .
 
 #micanje sa indexa
 git reset HEAD -- <datoteka1> <datoteka2>
+
+#vracanje na zadnju veziju
+git checkout HEAD -- <datoteka1> <datoteka2>
