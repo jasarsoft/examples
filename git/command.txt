@@ -19,3 +19,6 @@ git config --global merge.tool gvimdiff
 
 #provjera da li imamo nesto spremiti
 git status
+
+#usporedba trenute i zadnje verzije u izmjeni
+git diff
