@@ -34,3 +34,6 @@ git add naziv_direktorija/*
 
 #dodavanje sve sto se nalazi u radnoj verziji
 git add .
+
+#micanje sa indexa
+git reset HEAD -- <datoteka1> <datoteka2>
