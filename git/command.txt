@@ -22,3 +22,6 @@ git status
 
 #usporedba trenute i zadnje verzije u izmjeni
 git diff
+
+#deset linija oko izmjenjenog dijela
+git diff -U10
