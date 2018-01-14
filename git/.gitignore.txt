@@ -1,0 +1,9 @@
+#Vim privremen datotek
+*.swp
+*.swo
+
+#JAVA kompajlirane klase
+*.class
+
+#Output direktoriji s rezultatima kompajliranja i builda
+target/*
