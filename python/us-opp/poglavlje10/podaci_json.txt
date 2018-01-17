@@ -1,0 +1,11 @@
+{
+    "ime": {
+        "ime": "Petar",
+        "prezime": "Petrovic"
+    },
+    "polozaj": [
+        "razvoj",
+        "manadzer"
+    ],
+    "starost": 40.5
+}
