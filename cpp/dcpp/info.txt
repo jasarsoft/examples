@@ -1,0 +1,3 @@
+Demistificirani C++
+Julian Stribar, Boris Motik
+1997
