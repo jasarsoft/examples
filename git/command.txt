@@ -46,3 +46,6 @@ git commit -m "komentar na promjenu"
 
 #datoteke koje ne zelimo u repozitoriju
 git rm --cached test.pyc
+
+#povijet projekta
+git log
