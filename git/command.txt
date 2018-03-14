@@ -64,3 +64,6 @@ git clean -n
 
 #brisanje doatoteka propisanje gitignore-om
 git clean -x
+
+#brisanje tacno privremenog direktorija
+git clean -f
