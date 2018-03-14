@@ -58,3 +58,6 @@ git gui
 
 #brisanje svih datoteka koje nisu dio trenutne verzije repozitorija
 git clean
+
+#dobijanje spiska za brisanje
+git clean -n
