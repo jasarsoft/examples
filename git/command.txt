@@ -55,3 +55,6 @@ git commit --amend -m "nova verzija..."
 
 #graficko manipulisanje gitom
 git gui
+
+#brisanje svih datoteka koje nisu dio trenutne verzije repozitorija
+git clean
