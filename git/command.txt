@@ -61,3 +61,6 @@ git clean
 
 #dobijanje spiska za brisanje
 git clean -n
+
+#brisanje doatoteka propisanje gitignore-om
+git clean -x
