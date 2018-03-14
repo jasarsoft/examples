@@ -49,3 +49,6 @@ git rm --cached test.pyc
 
 #povijet projekta
 git log
+
+#ispravljanje zadnjeg commita
+git commit --amend -m "nova verzija..."
