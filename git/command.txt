@@ -40,3 +40,6 @@ git reset HEAD -- <datoteka1> <datoteka2>
 
 #vracanje na zadnju veziju
 git checkout HEAD -- <datoteka1> <datoteka2>
+
+#prvi commit
+git commit -m "komentar na promjenu"
