@@ -52,3 +52,6 @@ git log
 
 #ispravljanje zadnjeg commita
 git commit --amend -m "nova verzija..."
+
+#graficko manipulisanje gitom
+git gui
