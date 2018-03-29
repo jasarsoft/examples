@@ -1,0 +1,91 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 5.7.11-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE prijatelji;
+Database changed
+mysql> SELECT * FROM kucni;
++----+----------+--------------+---------+
+| id | Ime      | Prezime      | Telefon |
++----+----------+--------------+---------+
+|  1 | Petar    | Peric        |  888888 |
+|  2 | Mitar    | Miric        |  111222 |
+|  3 | Zorana   | Zoranovic    |  555666 |
+|  5 | Vasilije | Doticni      |  333111 |
+| 10 | Goran    | Goranovic    |  333222 |
+| 11 | Ana      | Pljakic      |  777222 |
+| 12 | Lazar    | Grigorijevic |  777444 |
+| 13 | Vasilije | Stojkovic    |  333111 |
++----+----------+--------------+---------+
+8 rows in set (0.01 sec)
+
+mysql> SELECT Ime FROM kucni;
++----------+
+| Ime      |
++----------+
+| Petar    |
+| Mitar    |
+| Zorana   |
+| Vasilije |
+| Goran    |
+| Ana      |
+| Lazar    |
+| Vasilije |
++----------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT Telefon FROM kucni;
++---------+
+| Telefon |
++---------+
+|  888888 |
+|  111222 |
+|  555666 |
+|  333111 |
+|  333222 |
+|  777222 |
+|  777444 |
+|  333111 |
++---------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT Ime, Prezime, Telefon FROM kucni;
++----------+--------------+---------+
+| Ime      | Prezime      | Telefon |
++----------+--------------+---------+
+| Petar    | Peric        |  888888 |
+| Mitar    | Miric        |  111222 |
+| Zorana   | Zoranovic    |  555666 |
+| Vasilije | Doticni      |  333111 |
+| Goran    | Goranovic    |  333222 |
+| Ana      | Pljakic      |  777222 |
+| Lazar    | Grigorijevic |  777444 |
+| Vasilije | Stojkovic    |  333111 |
++----------+--------------+---------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT Prezime, Ime, Telefon FROM kucni;
++--------------+----------+---------+
+| Prezime      | Ime      | Telefon |
++--------------+----------+---------+
+| Peric        | Petar    |  888888 |
+| Miric        | Mitar    |  111222 |
+| Zoranovic    | Zorana   |  555666 |
+| Doticni      | Vasilije |  333111 |
+| Goranovic    | Goran    |  333222 |
+| Pljakic      | Ana      |  777222 |
+| Grigorijevic | Lazar    |  777444 |
+| Stojkovic    | Vasilije |  333111 |
++--------------+----------+---------+
+8 rows in set (0.00 sec)
+
+mysql>
