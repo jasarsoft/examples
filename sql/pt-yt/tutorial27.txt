@@ -1,0 +1,74 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 5.7.11-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE firma;
+Database changed
+mysql> SELECT * FROM Prodavnice;
++------+-----------+------------+-----------+-------------+------+
+| p_id | gradovi   | prodavnica | proizvod  | raspolozivo | cena |
++------+-----------+------------+-----------+-------------+------+
+|    1 | Beograd   | prbg1      | Kafa      |         121 |  150 |
+|    2 | Beograd   | prbg2      | Cigare    |          50 |  300 |
+|    3 | Subotica  | prsub1     | Hleb      |          43 |   45 |
+|    4 | Nis       | prnis1     | Hleb      |          23 |   55 |
+|    5 | Kraljveo  | prnkr1     | Pavlaka   |         155 |   50 |
+|    6 | Uzice     | pruzi1     | Mleko     |          68 |   90 |
+|    7 | Majdanpek | prmaj1     | Mleko     |          91 |   87 |
+|    8 | Bor       | prbor1     | Pavlaka   |         155 |   50 |
+|    9 | Kikinda   | prkik1     | Ajzaklija |          38 |  650 |
+|   10 | Obrenovac | prob1      | Jabuke    |          35 |  120 |
+|   11 | Smederevo | prsm1      | Ajvar     |          28 |  270 |
+|   12 | Zrenjanin | przr1      | Somun     |          10 |   59 |
+|   13 | Jagodina  | prjg1      | Bakalar   |          29 |  400 |
++------+-----------+------------+-----------+-------------+------+
+13 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Poslato;
++------+----------+------+
+| s_id | dokument | p_id |
++------+----------+------+
+|    1 |    55210 |    1 |
+|    2 |    32618 |    1 |
+|    3 |    50687 |    9 |
+|    4 |    49321 |    4 |
+|    5 |    39658 |    3 |
+|    6 |    41200 |   11 |
++------+----------+------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Prodavnice.gradovi, Prodavnice.prodavnica, Poslato.dokument
+    -> FROM Prodavnice
+    -> LEFT JOIN Poslato
+    -> ON Prodavnice.p_id=Poslato.p_id
+    -> ORDER BY Prodavnice.gradovi;
++-----------+------------+----------+
+| gradovi   | prodavnica | dokument |
++-----------+------------+----------+
+| Beograd   | prbg2      |     NULL |
+| Beograd   | prbg1      |    32618 |
+| Beograd   | prbg1      |    55210 |
+| Bor       | prbor1     |     NULL |
+| Jagodina  | prjg1      |     NULL |
+| Kikinda   | prkik1     |    50687 |
+| Kraljveo  | prnkr1     |     NULL |
+| Majdanpek | prmaj1     |     NULL |
+| Nis       | prnis1     |    49321 |
+| Obrenovac | prob1      |     NULL |
+| Smederevo | prsm1      |    41200 |
+| Subotica  | prsub1     |    39658 |
+| Uzice     | pruzi1     |     NULL |
+| Zrenjanin | przr1      |     NULL |
++-----------+------------+----------+
+14 rows in set (0.08 sec)
+
+mysql>
