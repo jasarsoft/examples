@@ -1,0 +1,129 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 5.7.11-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE firma;
+Database changed
+mysql> SELECT * FROM Prodavnice;
++------+-----------+------------+-----------+-------------+------+
+| p_id | gradovi   | prodavnica | proizvod  | raspolozivo | cena |
++------+-----------+------------+-----------+-------------+------+
+|    1 | Beograd   | prbg1      | Kafa      |         121 |  150 |
+|    2 | Beograd   | prbg2      | Cigare    |          50 |  300 |
+|    3 | Subotica  | prsub1     | Hleb      |          43 |   45 |
+|    4 | Nis       | prnis1     | Hleb      |          23 |   55 |
+|    5 | Kraljveo  | prnkr1     | Pavlaka   |         155 |   50 |
+|    6 | Uzice     | pruzi1     | Mleko     |          68 |   90 |
+|    7 | Majdanpek | prmaj1     | Mleko     |          91 |   87 |
+|    8 | Bor       | prbor1     | Pavlaka   |         155 |   50 |
+|    9 | Kikinda   | prkik1     | Ajzaklija |          38 |  650 |
+|   10 | Obrenovac | prob1      | Jabuke    |          35 |  120 |
+|   11 | Smederevo | prsm1      | Ajvar     |          28 |  270 |
+|   12 | Zrenjanin | przr1      | Somun     |          10 |   59 |
+|   13 | Jagodina  | prjg1      | Bakalar   |          29 |  400 |
++------+-----------+------------+-----------+-------------+------+
+13 rows in set (0.05 sec)
+
+mysql> CREATE TABLE Inostranstvo(
+    -> p_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    -> gradovi VARCHAR (30),
+    -> prodavnica VARCHAR(30),
+    -> proizvod VARCHAR(30),
+    -> raspolozivo INT,
+    -> cena INT);
+Query OK, 0 rows affected (0.35 sec)
+
+mysql> INSERT INTO Inostranstvo
+    -> VALUES(NULL, 'Berlin', 'prber1', 'Bakalar', 250, 650);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> SELECT * FROM Inostranstvo;
++------+---------+------------+----------+-------------+------+
+| p_id | gradovi | prodavnica | proizvod | raspolozivo | cena |
++------+---------+------------+----------+-------------+------+
+|    1 | Berlin  | prber1     | Bakalar  |         250 |  650 |
++------+---------+------------+----------+-------------+------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM Prodavnice
+    -> UNION
+    -> SELECT * FROM Inostranstvo;
++------+-----------+------------+-----------+-------------+------+
+| p_id | gradovi   | prodavnica | proizvod  | raspolozivo | cena |
++------+-----------+------------+-----------+-------------+------+
+|    1 | Beograd   | prbg1      | Kafa      |         121 |  150 |
+|    2 | Beograd   | prbg2      | Cigare    |          50 |  300 |
+|    3 | Subotica  | prsub1     | Hleb      |          43 |   45 |
+|    4 | Nis       | prnis1     | Hleb      |          23 |   55 |
+|    5 | Kraljveo  | prnkr1     | Pavlaka   |         155 |   50 |
+|    6 | Uzice     | pruzi1     | Mleko     |          68 |   90 |
+|    7 | Majdanpek | prmaj1     | Mleko     |          91 |   87 |
+|    8 | Bor       | prbor1     | Pavlaka   |         155 |   50 |
+|    9 | Kikinda   | prkik1     | Ajzaklija |          38 |  650 |
+|   10 | Obrenovac | prob1      | Jabuke    |          35 |  120 |
+|   11 | Smederevo | prsm1      | Ajvar     |          28 |  270 |
+|   12 | Zrenjanin | przr1      | Somun     |          10 |   59 |
+|   13 | Jagodina  | prjg1      | Bakalar   |          29 |  400 |
+|    1 | Berlin    | prber1     | Bakalar   |         250 |  650 |
++------+-----------+------------+-----------+-------------+------+
+14 rows in set (0.05 sec)
+
+mysql> DESCRIBE Prodavnice;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| p_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| gradovi     | varchar(30) | YES  |     | NULL    |                |
+| prodavnica  | varchar(30) | YES  |     | NULL    |                |
+| proizvod    | varchar(30) | YES  |     | NULL    |                |
+| raspolozivo | int(11)     | YES  |     | NULL    |                |
+| cena        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> DESCRIBE Inostranstvo;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| p_id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| gradovi     | varchar(30) | YES  |     | NULL    |                |
+| prodavnica  | varchar(30) | YES  |     | NULL    |                |
+| proizvod    | varchar(30) | YES  |     | NULL    |                |
+| raspolozivo | int(11)     | YES  |     | NULL    |                |
+| cena        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Prodavnice
+    -> UNION ALL
+    -> SELECT * FROM Inostranstvo;
++------+-----------+------------+-----------+-------------+------+
+| p_id | gradovi   | prodavnica | proizvod  | raspolozivo | cena |
++------+-----------+------------+-----------+-------------+------+
+|    1 | Beograd   | prbg1      | Kafa      |         121 |  150 |
+|    2 | Beograd   | prbg2      | Cigare    |          50 |  300 |
+|    3 | Subotica  | prsub1     | Hleb      |          43 |   45 |
+|    4 | Nis       | prnis1     | Hleb      |          23 |   55 |
+|    5 | Kraljveo  | prnkr1     | Pavlaka   |         155 |   50 |
+|    6 | Uzice     | pruzi1     | Mleko     |          68 |   90 |
+|    7 | Majdanpek | prmaj1     | Mleko     |          91 |   87 |
+|    8 | Bor       | prbor1     | Pavlaka   |         155 |   50 |
+|    9 | Kikinda   | prkik1     | Ajzaklija |          38 |  650 |
+|   10 | Obrenovac | prob1      | Jabuke    |          35 |  120 |
+|   11 | Smederevo | prsm1      | Ajvar     |          28 |  270 |
+|   12 | Zrenjanin | przr1      | Somun     |          10 |   59 |
+|   13 | Jagodina  | prjg1      | Bakalar   |          29 |  400 |
+|    1 | Berlin    | prber1     | Bakalar   |         250 |  650 |
++------+-----------+------------+-----------+-------------+------+
+14 rows in set (0.02 sec)
+
+mysql>
