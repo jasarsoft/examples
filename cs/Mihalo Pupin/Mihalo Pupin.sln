@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba 23", "Vjezba 23\Vjez
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba 23.1", "Vjezba 23.1\Vjezba 23.1.csproj", "{BA24AB25-A520-4747-BC34-7DE5396BFA5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba 24", "Vjezba 24\Vjezba 24.csproj", "{BD425657-9D74-43E6-9613-C5E53D98293F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{BA24AB25-A520-4747-BC34-7DE5396BFA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA24AB25-A520-4747-BC34-7DE5396BFA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA24AB25-A520-4747-BC34-7DE5396BFA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD425657-9D74-43E6-9613-C5E53D98293F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD425657-9D74-43E6-9613-C5E53D98293F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD425657-9D74-43E6-9613-C5E53D98293F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD425657-9D74-43E6-9613-C5E53D98293F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
