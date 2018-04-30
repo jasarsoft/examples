@@ -8,14 +8,18 @@
     
     <script>
         function detalji(){
-                document.write('Name ' + this.name + "   HP " + this.health + "  AT " + this.attack + "<br>");
-            }
+            document.write('Name ' + this.name + "   HP " + this.health + "  AT " + this.attack + "<br>");
+        }
+        function war(player1, player2){
+            player1.health - player2.attack;
+        }
 
         var tenk = {
             name: "Ruski",
             health: 340,
             attack: 78,
-            info: detalji
+            info: detalji,
+            war: war
         }
 
         var tenk2 = {
@@ -27,6 +31,8 @@
 
         tenk.info();
         tenk2.info();
+
+        war(tenk, tenk2);
 
     </script>
 </body>
