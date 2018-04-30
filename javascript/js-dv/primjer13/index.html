@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 7</title>
+</head>
+<body>
+    <h1 id="logo">Welcome DOM</h1>
+    <ul id="mainNav">
+        <li>Element NOde</li>
+        <li>Atribure Node 2</li>
+        <li>Text Node</li>
+    </ul>
+    
+    <script>
+        var item = document.getElementById('logo');
+        item.innerHTML = "Dobrodosli u DOM";
+        item.style.color = 'red';
+
+        var li = document.getElementsByTagName('li');
+
+        for(var i = 0; i < li.length; i++){
+            console.log(li[i]);
+        }
+        
+    </script>
+</body>
+</html>
