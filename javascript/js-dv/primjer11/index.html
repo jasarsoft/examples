@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 6</title>
+</head>
+<body>
+    
+    <script>
+        //var tenk = new Object();
+        //tenk.name = "Ruski";
+
+        var tenk = {
+            name: "Ruski",
+            health: 340,
+            attack: 78,
+            info: function(){
+                document.write('Name ' + tenk.name + "   HP " + tenk.health + "  AT " + tenk.attack);
+            }
+        }
+
+        var tenk2 = {
+            name: "Americki",
+            health: 400,
+            attack: 66
+        }
+
+        alert(tenk.health);
+        alert(tenk2.name);
+        alert(tenk.info());
+
+    </script>
+</body>
+</html>
