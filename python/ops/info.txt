@@ -1,2 +1,0 @@
-Osnove programiranja Singidunum
-Python 3.5
