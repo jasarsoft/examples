@@ -1,0 +1,20 @@
+Naziv proizvodjaca  ACME                Potrosnja energije              2753.12 w
+Naziv modela        Cookie maker 5      Max broj sati rada             95000 sati
+Godina proizvodnje                 2007 Broj stepeni slobode kretanja      6 sslk
+Pogon: Hidraulicni pogon                Efikasnost:                   214284.99 #
+Naziv proizvodjaca  ACME                Potrosnja energije              2900.10 w
+Naziv modela        Cookie maker 2      Max broj sati rada             91000 sati
+Godina proizvodnje                 2005 Broj stepeni slobode kretanja      4 sslk
+Pogon: Hidraulicni pogon                Efikasnost:                   331382.63 #
+Naziv proizvodjaca  ESMO                Potrosnja energije              3210.00 w
+Naziv modela        El-Tik-31A4         Max broj sati rada             61000 sati
+Godina proizvodnje                 2011 Broj stepeni slobode kretanja      4 sslk
+Pogon: Hidraulicni pogon                Efikasnost:                   300307.39 #
+Naziv proizvodjaca  ESMO                Potrosnja energije              3920.00 w
+Naziv modela        El-Tik-32A6         Max broj sati rada             67000 sati
+Godina proizvodnje                 2012 Broj stepeni slobode kretanja      6 sslk
+Pogon: Hidraulicni pogon                Efikasnost:                   256229.00 #
+Naziv proizvodjaca  ESMO                Potrosnja energije              2449.99 w
+Naziv modela        200RE-Clicker       Max broj sati rada             23000 sati
+Godina proizvodnje                 2001 Broj stepeni slobode kretanja      2 sslk
+Pogon: Hidraulicni pogon                Efikasnost:                   281484.38 #
